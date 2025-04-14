@@ -16,7 +16,4 @@ namespace BackwpupPlugin\Helpers\backup\startjobswithlinks;
 // Standard plugin security, keep this line in place.
 defined( 'ABSPATH' ) || die();
 
-function allow_start_with_links( $content ) {
-	return true;
-}
-add_filter( 'backwpup_allow_job_start_with_links', __NAMESPACE__ . '\allow_start_with_links' );
+add_filter( 'backwpup_allow_job_start_with_links', '__return_true' );
